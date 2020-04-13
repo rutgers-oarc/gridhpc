@@ -1,0 +1,293 @@
+Starting job fah on e1c-137 at 2020-04-13 00:10:47
+
+RUNDIR is /gpfs/gpfs/scratch/babbott/gridhpc/fah.elf.36746
+SINGCMD is singularity exec --nv -B /etc/OpenCL/vendors /home1/babbott/gridhpc/fold.simg FAHClient --user=babbott --team=86926 --smp=true --gpu=true --chdir=/gpfs/gpfs/scratch/babbott/gridhpc/fah.elf.36746 --exit-when-done --max-units 1 --max-queue 1 --checkpoint 1
+SLURM_CHECKPOINT_IMAGE_DIR=/var/slurm/checkpoint
+SLURM_NODELIST=e1c-137
+SLURM_JOB_NAME=fah
+SLURMD_NODENAME=e1c-137
+SLURM_TOPOLOGY_ADDR=e1c-137
+SLURM_PRIO_PROCESS=0
+SLURM_NODE_ALIASES=(null)
+SLURM_JOB_QOS=gpu-award
+SLURM_TOPOLOGY_ADDR_PATTERN=node
+SLURM_NNODES=1
+SLURM_JOBID=36746
+SLURM_TASKS_PER_NODE=24
+SLURM_WORKING_CLUSTER=elf:elf-slurm1:6817:8448
+SLURM_JOB_ID=36746
+SLURM_JOB_USER=babbott
+SLURM_JOB_UID=2272
+SLURM_NODEID=0
+SLURM_SUBMIT_DIR=/home1/babbott/gridhpc
+SLURM_TASK_PID=11501
+SLURM_CPUS_ON_NODE=24
+SLURM_PROCID=0
+SLURM_JOB_NODELIST=e1c-137
+SLURM_LOCALID=0
+SLURM_JOB_GID=100
+SLURM_JOB_CPUS_PER_NODE=24
+SLURM_CLUSTER_NAME=elf
+SLURM_GTIDS=0
+SLURM_SUBMIT_HOST=elf1.hpc.rutgers.edu
+SLURM_JOB_PARTITION=gpu
+SLURM_JOB_ACCOUNT=jbv9-001
+SLURM_JOB_NUM_NODES=1
+
+Queueing cleaner 00:10:47
+Submitted batch job 36747 on cluster elf
+Creating rundir 00:10:47
+pwd is /gpfs/gpfs/scratch/babbott/gridhpc/fah.elf.36746 00:10:47
+Starting client 00:10:47
+04:10:48:************************* Folding@home Client *************************
+04:10:48:        Website: https://foldingathome.org/
+04:10:48:      Copyright: (c) 2009-2018 foldingathome.org
+04:10:48:         Author: Joseph Coffland <joseph@cauldrondevelopment.com>
+04:10:48:           Args: --user=babbott --team=86926 --smp=true --gpu=true
+04:10:48:                 --chdir=/gpfs/gpfs/scratch/babbott/gridhpc/fah.elf.36746
+04:10:48:                 --exit-when-done --max-units 1 --max-queue 1 --checkpoint 1
+04:10:48:         Config: <none>
+04:10:48:******************************** Build ********************************
+04:10:48:        Version: 7.5.1
+04:10:48:           Date: May 12 2018
+04:10:48:           Time: 22:51:07
+04:10:48:     Repository: Git
+04:10:48:       Revision: 4705bf53c635f88b8fe85af7675557e15d491ff0
+04:10:48:         Branch: master
+04:10:48:       Compiler: GNU 4.4.7 20120313 (Red Hat 4.4.7-18)
+04:10:48:        Options: -std=gnu++98 -O3 -funroll-loops
+04:10:48:       Platform: linux2 4.14.0-3-amd64
+04:10:48:           Bits: 64
+04:10:48:           Mode: Release
+04:10:48:******************************* System ********************************
+04:10:48:            CPU: Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz
+04:10:48:         CPU ID: GenuineIntel Family 6 Model 63 Stepping 2
+04:10:48:           CPUs: 24
+04:10:48:         Memory: 251.53GiB
+04:10:48:    Free Memory: 239.92GiB
+04:10:48:        Threads: POSIX_THREADS
+04:10:48:     OS Version: 3.10
+04:10:48:    Has Battery: false
+04:10:48:     On Battery: false
+04:10:48:     UTC Offset: -4
+04:10:48:            PID: 11570
+04:10:48:            CWD: /gpfs/gpfs/scratch/babbott/gridhpc/fah.elf.36746
+04:10:48:             OS: Linux 3.10.0-1062.12.1.el7.x86_64 x86_64
+04:10:48:        OS Arch: AMD64
+04:10:48:           GPUs: 2
+04:10:48:          GPU 0: Bus:4 Slot:0 Func:0 NVIDIA:3 GK110 [Tesla K40m]
+04:10:48:          GPU 1: Bus:130 Slot:0 Func:0 NVIDIA:3 GK110 [Tesla K40m]
+04:10:48:  CUDA Device 0: Platform:0 Device:0 Bus:4 Slot:0 Compute:3.5 Driver:10.2
+04:10:48:  CUDA Device 1: Platform:0 Device:1 Bus:130 Slot:0 Compute:3.5 Driver:10.2
+04:10:48:OpenCL Device 0: Platform:0 Device:0 Bus:4 Slot:0 Compute:1.2 Driver:440.33
+04:10:48:OpenCL Device 1: Platform:0 Device:1 Bus:130 Slot:0 Compute:1.2 Driver:440.33
+04:10:48:***********************************************************************
+04:10:48:<config>
+04:10:48:  <!-- Folding Slots -->
+04:10:48:</config>
+04:10:48:Connecting to assign1.foldingathome.org:8080
+04:10:48:Updated GPUs.txt
+04:10:48:Read GPUs.txt
+04:10:48:Trying to access database...
+04:10:48:Successfully acquired database lock
+04:10:48:FS00:Set client configured
+04:10:48:Enabled folding slot 00: READY cpu:21
+04:10:48:Enabled folding slot 01: READY gpu:0:GK110 [Tesla K40m]
+04:10:48:Enabled folding slot 02: READY gpu:1:GK110 [Tesla K40m]
+04:10:48:WU00:FS00:Connecting to 65.254.110.245:8080
+04:10:48:WU01:FS01:Connecting to 65.254.110.245:8080
+04:10:48:WU02:FS02:Connecting to 65.254.110.245:8080
+04:10:48:WU00:FS00:Connecting to 65.254.110.245:8080
+04:10:48:WU01:FS01:Connecting to 65.254.110.245:8080
+04:10:48:WU02:FS02:Connecting to 65.254.110.245:8080
+[93m04:10:49:WARNING:WU00:FS00:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+04:10:49:WU00:FS00:Connecting to 18.218.241.186:80
+[93m04:10:49:WARNING:WU01:FS01:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+04:10:49:WU01:FS01:Connecting to 18.218.241.186:80
+[93m04:10:49:WARNING:WU02:FS02:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+04:10:49:WU02:FS02:Connecting to 18.218.241.186:80
+[93m04:10:49:WARNING:WU00:FS00:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m04:10:49:ERROR:WU00:FS00:Exception: Could not get an assignment[0m
+[93m04:10:49:WARNING:WU02:FS02:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m04:10:49:ERROR:WU02:FS02:Exception: Could not get an assignment[0m
+[93m04:10:49:WARNING:WU01:FS01:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m04:10:49:ERROR:WU01:FS01:Exception: Could not get an assignment[0m
+04:10:49:WU02:FS02:Connecting to 65.254.110.245:8080
+04:10:49:WU00:FS00:Connecting to 65.254.110.245:8080
+04:10:49:WU01:FS01:Connecting to 65.254.110.245:8080
+[93m04:10:50:WARNING:WU02:FS02:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+04:10:50:WU02:FS02:Connecting to 18.218.241.186:80
+[93m04:10:50:WARNING:WU00:FS00:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+04:10:50:WU00:FS00:Connecting to 18.218.241.186:80
+[93m04:10:50:WARNING:WU01:FS01:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+04:10:50:WU01:FS01:Connecting to 18.218.241.186:80
+[93m04:10:50:WARNING:WU02:FS02:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m04:10:50:ERROR:WU02:FS02:Exception: Could not get an assignment[0m
+[93m04:10:50:WARNING:WU00:FS00:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m04:10:50:ERROR:WU00:FS00:Exception: Could not get an assignment[0m
+[93m04:10:50:WARNING:WU01:FS01:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m04:10:50:ERROR:WU01:FS01:Exception: Could not get an assignment[0m
+04:11:49:Saving configuration to config.xml
+04:11:49:<config>
+04:11:49:  <!-- Folding Slots -->
+04:11:49:  <slot id='0' type='CPU'/>
+04:11:49:  <slot id='1' type='GPU'/>
+04:11:49:  <slot id='2' type='GPU'/>
+04:11:49:</config>
+04:11:49:WU00:FS00:Connecting to 65.254.110.245:8080
+04:11:50:WU00:FS00:Assigned to work server 128.252.203.9
+04:11:50:WU00:FS00:Requesting new work unit for slot 00: READY cpu:21 from 128.252.203.9
+04:11:50:WU00:FS00:Connecting to 128.252.203.9:8080
+[91m04:11:50:ERROR:WU00:FS00:Exception: Server did not assign work unit[0m
+04:11:50:WU01:FS01:Connecting to 65.254.110.245:8080
+04:11:50:WU02:FS02:Connecting to 65.254.110.245:8080
+[93m04:11:50:WARNING:WU01:FS01:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+04:11:50:WU01:FS01:Connecting to 18.218.241.186:80
+[93m04:11:50:WARNING:WU02:FS02:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+04:11:50:WU02:FS02:Connecting to 18.218.241.186:80
+[93m04:11:50:WARNING:WU01:FS01:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m04:11:50:ERROR:WU01:FS01:Exception: Could not get an assignment[0m
+[93m04:11:50:WARNING:WU02:FS02:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m04:11:50:ERROR:WU02:FS02:Exception: Could not get an assignment[0m
+starttime is 1586751167
+04:13:27:WU00:FS00:Connecting to 65.254.110.245:8080
+[93m04:13:27:WARNING:WU00:FS00:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+04:13:27:WU00:FS00:Connecting to 18.218.241.186:80
+[93m04:13:27:WARNING:WU00:FS00:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m04:13:27:ERROR:WU00:FS00:Exception: Could not get an assignment[0m
+04:13:27:WU01:FS01:Connecting to 65.254.110.245:8080
+04:13:27:WU02:FS02:Connecting to 65.254.110.245:8080
+[93m04:13:27:WARNING:WU01:FS01:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+04:13:27:WU01:FS01:Connecting to 18.218.241.186:80
+[93m04:13:27:WARNING:WU01:FS01:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m04:13:27:ERROR:WU01:FS01:Exception: Could not get an assignment[0m
+[93m04:13:27:WARNING:WU02:FS02:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+04:13:27:WU02:FS02:Connecting to 18.218.241.186:80
+[93m04:13:27:WARNING:WU02:FS02:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m04:13:27:ERROR:WU02:FS02:Exception: Could not get an assignment[0m
+04:16:04:WU00:FS00:Connecting to 65.254.110.245:8080
+[93m04:16:04:WARNING:WU00:FS00:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+04:16:04:WU00:FS00:Connecting to 18.218.241.186:80
+[93m04:16:04:WARNING:WU00:FS00:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m04:16:04:ERROR:WU00:FS00:Exception: Could not get an assignment[0m
+04:16:04:WU01:FS01:Connecting to 65.254.110.245:8080
+04:16:04:WU02:FS02:Connecting to 65.254.110.245:8080
+[93m04:16:04:WARNING:WU01:FS01:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+04:16:04:WU01:FS01:Connecting to 18.218.241.186:80
+[93m04:16:04:WARNING:WU01:FS01:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m04:16:04:ERROR:WU01:FS01:Exception: Could not get an assignment[0m
+[93m04:16:05:WARNING:WU02:FS02:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+04:16:05:WU02:FS02:Connecting to 18.218.241.186:80
+[93m04:16:05:WARNING:WU02:FS02:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m04:16:05:ERROR:WU02:FS02:Exception: Could not get an assignment[0m
+04:20:18:WU00:FS00:Connecting to 65.254.110.245:8080
+[93m04:20:18:WARNING:WU00:FS00:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+04:20:18:WU00:FS00:Connecting to 18.218.241.186:80
+[93m04:20:19:WARNING:WU00:FS00:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m04:20:19:ERROR:WU00:FS00:Exception: Could not get an assignment[0m
+04:20:19:WU01:FS01:Connecting to 65.254.110.245:8080
+04:20:19:WU02:FS02:Connecting to 65.254.110.245:8080
+[93m04:20:19:WARNING:WU01:FS01:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+04:20:19:WU01:FS01:Connecting to 18.218.241.186:80
+[93m04:20:19:WARNING:WU01:FS01:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m04:20:19:ERROR:WU01:FS01:Exception: Could not get an assignment[0m
+[93m04:20:19:WARNING:WU02:FS02:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+04:20:19:WU02:FS02:Connecting to 18.218.241.186:80
+[93m04:20:19:WARNING:WU02:FS02:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m04:20:19:ERROR:WU02:FS02:Exception: Could not get an assignment[0m
+04:27:10:WU00:FS00:Connecting to 65.254.110.245:8080
+[93m04:27:10:WARNING:WU00:FS00:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+04:27:10:WU00:FS00:Connecting to 18.218.241.186:80
+[93m04:27:10:WARNING:WU00:FS00:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m04:27:10:ERROR:WU00:FS00:Exception: Could not get an assignment[0m
+04:27:10:WU01:FS01:Connecting to 65.254.110.245:8080
+04:27:10:WU02:FS02:Connecting to 65.254.110.245:8080
+[93m04:27:10:WARNING:WU01:FS01:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+04:27:10:WU01:FS01:Connecting to 18.218.241.186:80
+04:27:10:WU01:FS01:Assigned to work server 140.163.4.241
+04:27:10:WU01:FS01:Requesting new work unit for slot 01: READY gpu:0:GK110 [Tesla K40m] from 140.163.4.241
+04:27:10:WU01:FS01:Connecting to 140.163.4.241:8080
+[93m04:27:10:WARNING:WU02:FS02:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+04:27:10:WU02:FS02:Connecting to 18.218.241.186:80
+[93m04:27:10:WARNING:WU02:FS02:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m04:27:10:ERROR:WU02:FS02:Exception: Could not get an assignment[0m
+04:27:31:WU01:FS01:Downloading 7.85MiB
+04:27:31:WU01:FS01:Download complete
+04:27:32:WU01:FS01:Received Unit: id:01 state:DOWNLOAD error:NO_ERROR project:11744 run:0 clone:1834 gen:18 core:0x22 unit:0x000000258ca304f15e67e8fd7fa011dd
+04:27:32:WU01:FS01:Downloading core from http://cores.foldingathome.org/v7/lin/64bit/Core_22.fah
+04:27:32:WU01:FS01:Connecting to cores.foldingathome.org:80
+04:27:32:WU01:FS01:FahCore 22: Downloading 3.58MiB
+04:27:32:WU01:FS01:FahCore 22: Download complete
+04:27:32:WU01:FS01:Valid core signature
+04:27:32:WU01:FS01:Unpacked 9.30MiB to cores/cores.foldingathome.org/v7/lin/64bit/Core_22.fah/FahCore_22
+04:27:32:WU01:FS01:Starting
+04:27:32:WU01:FS01:Running FahCore: /usr/bin/FAHCoreWrapper /gpfs/gpfs/scratch/babbott/gridhpc/fah.elf.36746/cores/cores.foldingathome.org/v7/lin/64bit/Core_22.fah/FahCore_22 -dir 01 -suffix 01 -version 705 -lifeline 11570 -checkpoint 1 -gpu-vendor nvidia -opencl-platform 0 -opencl-device 0 -cuda-device 0 -gpu 0
+04:27:32:WU01:FS01:Started FahCore on PID 13882
+04:27:33:WU01:FS01:Core PID:13886
+04:27:33:WU01:FS01:FahCore 0x22 started
+04:27:33:WU01:FS01:0x22:*********************** Log Started 2020-04-13T04:27:33Z ***********************
+04:27:33:WU01:FS01:0x22:*************************** Core22 Folding@home Core ***************************
+04:27:33:WU01:FS01:0x22:       Type: 0x22
+04:27:33:WU01:FS01:0x22:       Core: Core22
+04:27:33:WU01:FS01:0x22:    Website: https://foldingathome.org/
+04:27:33:WU01:FS01:0x22:  Copyright: (c) 2009-2018 foldingathome.org
+04:27:33:WU01:FS01:0x22:     Author: John Chodera <john.chodera@choderalab.org> and Rafal Wiewiora
+04:27:33:WU01:FS01:0x22:             <rafal.wiewiora@choderalab.org>
+04:27:33:WU01:FS01:0x22:       Args: -dir 01 -suffix 01 -version 705 -lifeline 13882 -checkpoint 1
+04:27:33:WU01:FS01:0x22:             -gpu-vendor nvidia -opencl-platform 0 -opencl-device 0 -cuda-device
+04:27:33:WU01:FS01:0x22:             0 -gpu 0
+04:27:33:WU01:FS01:0x22:     Config: <none>
+04:27:33:WU01:FS01:0x22:************************************ Build *************************************
+04:27:33:WU01:FS01:0x22:    Version: 0.0.2
+04:27:33:WU01:FS01:0x22:       Date: Dec 6 2019
+04:27:33:WU01:FS01:0x22:       Time: 21:20:17
+04:27:33:WU01:FS01:0x22: Repository: Git
+04:27:33:WU01:FS01:0x22:   Revision: f87d92b58abdf7e6bf2e173cfbc4dc3e837c7042
+04:27:33:WU01:FS01:0x22:     Branch: core22
+04:27:33:WU01:FS01:0x22:   Compiler: GNU 4.8.2 20140120 (Red Hat 4.8.2-15)
+04:27:33:WU01:FS01:0x22:    Options: -std=gnu++98 -O3 -funroll-loops
+04:27:33:WU01:FS01:0x22:   Platform: linux2 4.9.87-linuxkit-aufs
+04:27:33:WU01:FS01:0x22:       Bits: 64
+04:27:33:WU01:FS01:0x22:       Mode: Release
+04:27:33:WU01:FS01:0x22:************************************ System ************************************
+04:27:33:WU01:FS01:0x22:        CPU: Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz
+04:27:33:WU01:FS01:0x22:     CPU ID: GenuineIntel Family 6 Model 63 Stepping 2
+04:27:33:WU01:FS01:0x22:       CPUs: 24
+04:27:33:WU01:FS01:0x22:     Memory: 251.53GiB
+04:27:33:WU01:FS01:0x22:Free Memory: 239.86GiB
+04:27:33:WU01:FS01:0x22:    Threads: POSIX_THREADS
+04:27:33:WU01:FS01:0x22: OS Version: 3.10
+04:27:33:WU01:FS01:0x22:Has Battery: false
+04:27:33:WU01:FS01:0x22: On Battery: false
+04:27:33:WU01:FS01:0x22: UTC Offset: -4
+04:27:33:WU01:FS01:0x22:        PID: 13886
+04:27:33:WU01:FS01:0x22:        CWD: /gpfs/gpfs/scratch/babbott/gridhpc/fah.elf.36746/work
+04:27:33:WU01:FS01:0x22:         OS: Linux 3.10.0-1062.12.1.el7.x86_64 x86_64
+04:27:33:WU01:FS01:0x22:    OS Arch: AMD64
+04:27:33:WU01:FS01:0x22:********************************************************************************
+04:27:33:WU01:FS01:0x22:Project: 11744 (Run 0, Clone 1834, Gen 18)
+04:27:33:WU01:FS01:0x22:Unit: 0x000000258ca304f15e67e8fd7fa011dd
+04:27:33:WU01:FS01:0x22:Reading tar file core.xml
+04:27:33:WU01:FS01:0x22:Reading tar file integrator.xml
+04:27:33:WU01:FS01:0x22:Reading tar file state.xml
+04:27:34:WU01:FS01:0x22:Reading tar file system.xml
+04:27:34:WU01:FS01:0x22:Digital signatures verified
+04:27:34:WU01:FS01:0x22:Folding@home GPU Core22 Folding@home Core
+04:27:34:WU01:FS01:0x22:Version 0.0.2
+04:27:42:WU01:FS01:0x22:Completed 0 out of 1000000 steps (0%)
+04:27:42:WU01:FS01:0x22:Temperature control disabled. Requirements: single Nvidia GPU, tmax must be < 110 and twait >= 900
+04:30:16:WU01:FS01:0x22:Completed 10000 out of 1000000 steps (1%)
+04:32:48:WU01:FS01:0x22:Completed 20000 out of 1000000 steps (2%)
+04:35:21:WU01:FS01:0x22:Completed 30000 out of 1000000 steps (3%)
+04:37:54:WU01:FS01:0x22:Completed 40000 out of 1000000 steps (4%)
+04:38:15:WU00:FS00:Connecting to 65.254.110.245:8080
+[93m04:38:15:WARNING:WU00:FS00:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+04:38:15:WU00:FS00:Connecting to 18.218.241.186:80
+[93m04:38:15:WARNING:WU00:FS00:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m04:38:15:ERROR:WU00:FS00:Exception: Could not get an assignment[0m
+04:38:16:WU02:FS02:Connecting to 65.254.110.245:8080
+[93m04:38:16:WARNING:WU02:FS02:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+04:38:16:WU02:FS02:Connecting to 18.218.241.186:80
+[93m04:38:16:WARNING:WU02:FS02:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m04:38:16:ERROR:WU02:FS02:Exception: Could not get an assignment[0m
+04:40:27:WU01:FS01:0x22:Completed 50000 out of 1000000 steps (5%)

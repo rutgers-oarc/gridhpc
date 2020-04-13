@@ -1,0 +1,203 @@
+Starting job rah on e1c-038 at 2020-04-13 00:11:09
+
+runtime is 600
+RUNDIR is /gpfs/gpfs/scratch/babbott/gridhpc/elf.rah.e1c-038.36748
+SINGCMD is singularity exec /home1/babbott/gridhpc/boinc.simg
+SLURM_CHECKPOINT_IMAGE_DIR=/var/slurm/checkpoint
+SLURM_NODELIST=e1c-038
+SLURM_JOB_NAME=rah
+SLURMD_NODENAME=e1c-038
+SLURM_TOPOLOGY_ADDR=e1c-038
+SLURM_PRIO_PROCESS=0
+SLURM_NODE_ALIASES=(null)
+SLURM_JOB_QOS=main-award
+SLURM_TOPOLOGY_ADDR_PATTERN=node
+SLURM_NNODES=1
+SLURM_JOBID=36748
+SLURM_TASKS_PER_NODE=24
+SLURM_WORKING_CLUSTER=elf:elf-slurm1:6817:8448
+SLURM_JOB_ID=36748
+SLURM_JOB_USER=babbott
+SLURM_JOB_UID=2272
+SLURM_NODEID=0
+SLURM_SUBMIT_DIR=/home1/babbott/gridhpc
+SLURM_TASK_PID=5283
+SLURM_CPUS_ON_NODE=24
+SLURM_PROCID=0
+SLURM_JOB_NODELIST=e1c-038
+SLURM_LOCALID=0
+SLURM_JOB_GID=100
+SLURM_JOB_CPUS_PER_NODE=24
+SLURM_CLUSTER_NAME=elf
+SLURM_GTIDS=0
+SLURM_SUBMIT_HOST=elf1.hpc.rutgers.edu
+SLURM_JOB_PARTITION=main
+SLURM_JOB_ACCOUNT=jbv9-001
+SLURM_JOB_NUM_NODES=1
+
+Queueing cleaner 00:11:09
+Submitted batch job 36749 on cluster elf
+Copying rundir 00:11:09
+pwd is /gpfs/gpfs/scratch/babbott/gridhpc/elf.rah.e1c-038.36748 00:11:09
+Starting client 00:11:09
+13-Apr-2020 00:11:10 [---] Starting BOINC client version 7.16.1 for x86_64-pc-linux-gnu
+13-Apr-2020 00:11:10 [---] Libraries: libcurl/7.29.0 NSS/3.36 zlib/1.2.7 libidn/1.28 libssh2/1.4.3
+13-Apr-2020 00:11:10 [---] Data directory: /gpfs/gpfs/scratch/babbott/gridhpc/elf.rah.e1c-038.36748
+13-Apr-2020 00:11:10 [---] No usable GPUs found
+13-Apr-2020 00:11:10 [---] Creating new client state file
+13-Apr-2020 00:11:10 [---] [libc detection] gathered: 2.17, GNU libc
+13-Apr-2020 00:11:10 [---] Host name: e1c-038
+13-Apr-2020 00:11:10 [---] Processor: 24 GenuineIntel Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz [Family 6 Model 63 Stepping 2]
+13-Apr-2020 00:11:10 [---] Processor features: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm epb invpcid_single ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+13-Apr-2020 00:11:10 [---] OS: Linux CentOS Linux: CentOS Linux 7 (Core) [3.10.0-1062.12.1.el7.x86_64|libc 2.17 (GNU libc)]
+13-Apr-2020 00:11:10 [---] Memory: 251.53 GB physical, 4.00 GB virtual
+13-Apr-2020 00:11:10 [---] Disk: 1028.81 TB total, 922.16 TB free
+13-Apr-2020 00:11:10 [---] Local time is UTC -4 hours
+13-Apr-2020 00:11:10 [---] Config: abort jobs on exit
+13-Apr-2020 00:11:10 [---] Config: exit when idle
+13-Apr-2020 00:11:10 [---] Config: run apps at regular priority
+13-Apr-2020 00:11:10 [---] Config: report completed tasks immediately
+13-Apr-2020 00:11:10 [---] Last benchmark was 18365 days 04:11:10 ago
+13-Apr-2020 00:11:10 [---] No general preferences found - using defaults
+13-Apr-2020 00:11:10 [---] Reading preferences override file
+13-Apr-2020 00:11:10 [---] Preferences:
+13-Apr-2020 00:11:10 [---]    max memory usage when active: 231805.65 MB
+13-Apr-2020 00:11:10 [---]    max memory usage when idle: 231805.65 MB
+13-Apr-2020 00:11:10 [---]    max disk usage: 944290.49 GB
+13-Apr-2020 00:11:10 [---]    (to change preferences, visit a project web site or select Preferences in the Manager)
+13-Apr-2020 00:11:10 [---] Setting up project and slot directories
+13-Apr-2020 00:11:10 [---] Checking active tasks
+13-Apr-2020 00:11:10 [---] Setting up GUI RPC socket
+13-Apr-2020 00:11:10 [---] Checking presence of 0 project files
+13-Apr-2020 00:11:10 [---] This computer is not attached to any projects
+13-Apr-2020 00:11:10 Initialization completed
+starttime is 1586751189
+Attaching to project 00:13:09
+pwd is /gpfs/gpfs/scratch/babbott/gridhpc/elf.rah.e1c-038.36748 00:13:09
+Waiting runtime 00:13:09
+13-Apr-2020 00:13:10 [---] Running CPU benchmarks
+13-Apr-2020 00:13:42 [---] Benchmark results:
+13-Apr-2020 00:13:42 [---]    Number of CPUs: 24
+13-Apr-2020 00:13:42 [---]    3512 floating point MIPS (Whetstone) per CPU
+13-Apr-2020 00:13:42 [---]    20044 integer MIPS (Dhrystone) per CPU
+13-Apr-2020 00:13:49 [http://boinc.bakerlab.org/rosetta/] Master file download succeeded
+13-Apr-2020 00:13:57 [Rosetta@home] General prefs: from Rosetta@home (last modified 27-Mar-2020 16:58:41)
+13-Apr-2020 00:13:57 [Rosetta@home] Host location: none
+13-Apr-2020 00:13:57 [Rosetta@home] General prefs: using your defaults
+13-Apr-2020 00:13:57 [---] Reading preferences override file
+13-Apr-2020 00:13:57 [---] Preferences:
+13-Apr-2020 00:13:57 [---]    max memory usage when active: 231805.65 MB
+13-Apr-2020 00:13:57 [---]    max memory usage when idle: 231805.65 MB
+13-Apr-2020 00:13:57 [---]    max disk usage: 944289.58 GB
+13-Apr-2020 00:13:57 [---]    (to change preferences, visit a project web site or select Preferences in the Manager)
+13-Apr-2020 00:14:42 [Rosetta@home] Output file 8e43a8e2d7243f9176bb7f1e28cd2959_dock_ens_20_04_15_28_12_localDocking_1_SAVE_ALL_OUT_910223_12_1_r910496250_0 for task 8e43a8e2d7243f9176bb7f1e28cd2959_dock_ens_20_04_15_28_12_localDocking_1_SAVE_ALL_OUT_910223_12_1 absent
+13-Apr-2020 00:16:46 [Rosetta@home] Task hgfp_het2_408_fold_SAVE_ALL_OUT_910913_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:16:46 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:17:06 [Rosetta@home] Task hgfp_good_frag_37_relax_SAVE_ALL_OUT_909163_52_1 exited with zero status but no 'finished' file
+13-Apr-2020 00:17:06 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:17:07 [Rosetta@home] Task hgfp_het2_280_fold_SAVE_ALL_OUT_910785_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:17:07 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:17:09 [Rosetta@home] Task hgfp_good_frag_732_fold_SAVE_ALL_OUT_909860_230_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:17:09 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:17:10 [Rosetta@home] Task hgfp_het2_136_fold_SAVE_ALL_OUT_910644_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:17:10 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:17:11 [Rosetta@home] Task hgfp_splitdimer_239_fold_SAVE_ALL_OUT_908247_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:17:11 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:17:12 [Rosetta@home] Task hgfp_het2_06_fold_SAVE_ALL_OUT_910514_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:17:12 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:17:13 [Rosetta@home] Task hgfp_splitdimer_117_fold_SAVE_ALL_OUT_908124_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:17:13 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:17:15 [Rosetta@home] Task hgfp_splitdimer_241_fold_SAVE_ALL_OUT_908249_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:17:15 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:17:16 [Rosetta@home] Task hgfp_good_frag_494_fold_SAVE_ALL_OUT_909622_52_1 exited with zero status but no 'finished' file
+13-Apr-2020 00:17:16 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:21:45 [Rosetta@home] Task hgfp_het2_408_fold_SAVE_ALL_OUT_910913_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:21:45 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:21:47 [Rosetta@home] Task hgfp_good_frag_37_relax_SAVE_ALL_OUT_909163_52_1 exited with zero status but no 'finished' file
+13-Apr-2020 00:21:47 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:21:48 [Rosetta@home] Task hgfp_het2_280_fold_SAVE_ALL_OUT_910785_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:21:48 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:21:49 [Rosetta@home] Task hgfp_good_frag_732_fold_SAVE_ALL_OUT_909860_230_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:21:49 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:21:50 [Rosetta@home] Task hgfp_het2_136_fold_SAVE_ALL_OUT_910644_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:21:50 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:21:51 [Rosetta@home] Task hgfp_splitdimer_239_fold_SAVE_ALL_OUT_908247_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:21:51 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:21:53 [Rosetta@home] Task hgfp_het2_06_fold_SAVE_ALL_OUT_910514_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:21:53 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:21:54 [Rosetta@home] Task hgfp_splitdimer_117_fold_SAVE_ALL_OUT_908124_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:21:54 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:21:55 [Rosetta@home] Task hgfp_splitdimer_241_fold_SAVE_ALL_OUT_908249_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:21:55 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:21:56 [Rosetta@home] Task hgfp_good_frag_494_fold_SAVE_ALL_OUT_909622_52_1 exited with zero status but no 'finished' file
+13-Apr-2020 00:21:56 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:21:57 [Rosetta@home] Task hgfp_splitdimer_313_fold_SAVE_ALL_OUT_908325_230_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:21:57 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+No more work +10 minutes
+13-Apr-2020 00:23:10 [Rosetta@home] work fetch suspended by user
+13-Apr-2020 00:26:49 [Rosetta@home] Task hgfp_het2_408_fold_SAVE_ALL_OUT_910913_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:26:49 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:26:50 [Rosetta@home] Task hgfp_good_frag_37_relax_SAVE_ALL_OUT_909163_52_1 exited with zero status but no 'finished' file
+13-Apr-2020 00:26:50 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:26:51 [Rosetta@home] Task hgfp_het2_280_fold_SAVE_ALL_OUT_910785_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:26:51 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:26:52 [Rosetta@home] Task hgfp_good_frag_732_fold_SAVE_ALL_OUT_909860_230_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:26:52 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:26:54 [Rosetta@home] Task hgfp_het2_136_fold_SAVE_ALL_OUT_910644_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:26:54 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:26:55 [Rosetta@home] Task hgfp_splitdimer_239_fold_SAVE_ALL_OUT_908247_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:26:55 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:26:56 [Rosetta@home] Task hgfp_het2_06_fold_SAVE_ALL_OUT_910514_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:26:56 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:26:57 [Rosetta@home] Task hgfp_splitdimer_117_fold_SAVE_ALL_OUT_908124_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:26:57 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:26:58 [Rosetta@home] Task hgfp_splitdimer_241_fold_SAVE_ALL_OUT_908249_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:26:58 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:27:00 [Rosetta@home] Task hgfp_good_frag_494_fold_SAVE_ALL_OUT_909622_52_1 exited with zero status but no 'finished' file
+13-Apr-2020 00:27:00 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:27:01 [Rosetta@home] Task hgfp_splitdimer_313_fold_SAVE_ALL_OUT_908325_230_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:27:01 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:31:51 [Rosetta@home] Task hgfp_het2_408_fold_SAVE_ALL_OUT_910913_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:31:51 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:31:52 [Rosetta@home] Task hgfp_good_frag_37_relax_SAVE_ALL_OUT_909163_52_1 exited with zero status but no 'finished' file
+13-Apr-2020 00:31:52 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:31:54 [Rosetta@home] Task hgfp_het2_280_fold_SAVE_ALL_OUT_910785_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:31:54 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:31:55 [Rosetta@home] Task hgfp_good_frag_732_fold_SAVE_ALL_OUT_909860_230_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:31:55 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:31:56 [Rosetta@home] Task hgfp_het2_136_fold_SAVE_ALL_OUT_910644_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:31:56 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:31:57 [Rosetta@home] Task hgfp_splitdimer_239_fold_SAVE_ALL_OUT_908247_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:31:57 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:31:58 [Rosetta@home] Task hgfp_het2_06_fold_SAVE_ALL_OUT_910514_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:31:58 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:32:00 [Rosetta@home] Task hgfp_splitdimer_117_fold_SAVE_ALL_OUT_908124_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:32:00 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:32:01 [Rosetta@home] Task hgfp_splitdimer_241_fold_SAVE_ALL_OUT_908249_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:32:01 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:32:02 [Rosetta@home] Task hgfp_good_frag_494_fold_SAVE_ALL_OUT_909622_52_1 exited with zero status but no 'finished' file
+13-Apr-2020 00:32:02 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:32:03 [Rosetta@home] Task hgfp_splitdimer_313_fold_SAVE_ALL_OUT_908325_230_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:32:03 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:36:48 [Rosetta@home] Task hgfp_het2_408_fold_SAVE_ALL_OUT_910913_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:36:48 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:36:49 [Rosetta@home] Task hgfp_good_frag_37_relax_SAVE_ALL_OUT_909163_52_1 exited with zero status but no 'finished' file
+13-Apr-2020 00:36:49 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:36:50 [Rosetta@home] Task hgfp_het2_280_fold_SAVE_ALL_OUT_910785_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:36:50 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:36:52 [Rosetta@home] Task hgfp_good_frag_732_fold_SAVE_ALL_OUT_909860_230_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:36:52 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:36:53 [Rosetta@home] Task hgfp_het2_136_fold_SAVE_ALL_OUT_910644_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:36:53 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:36:54 [Rosetta@home] Task hgfp_splitdimer_239_fold_SAVE_ALL_OUT_908247_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:36:54 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:36:55 [Rosetta@home] Task hgfp_het2_06_fold_SAVE_ALL_OUT_910514_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:36:55 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:36:56 [Rosetta@home] Task hgfp_splitdimer_117_fold_SAVE_ALL_OUT_908124_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:36:56 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:36:57 [Rosetta@home] Task hgfp_splitdimer_241_fold_SAVE_ALL_OUT_908249_166_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:36:57 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:36:59 [Rosetta@home] Task hgfp_good_frag_494_fold_SAVE_ALL_OUT_909622_52_1 exited with zero status but no 'finished' file
+13-Apr-2020 00:36:59 [Rosetta@home] If this happens repeatedly you may need to reset the project.
+13-Apr-2020 00:37:00 [Rosetta@home] Task hgfp_splitdimer_313_fold_SAVE_ALL_OUT_908325_230_0 exited with zero status but no 'finished' file
+13-Apr-2020 00:37:00 [Rosetta@home] If this happens repeatedly you may need to reset the project.
