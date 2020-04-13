@@ -6,7 +6,7 @@ To generate singularity images, run something like the following:
 
 ml singularity
 
-sudo singularity build fold.simg fold.sing
+sudo /somepath/singularity build fold.simg fold.sing
 
 Change username, partitions, paths and so forth to customize the run scripts.
 
