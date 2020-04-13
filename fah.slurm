@@ -40,7 +40,7 @@ sbatch --dependency=afternotok:$SLURM_JOB_ID --kill-on-invalid-dep=yes -M $SLURM
 # create run dir
 echo Creating rundir `date +%T`
 mkdir -p $RUNDIR
-# in case you want a custom config.xml
+# custom config.xml for single gpu only
 #rsync -a --delete $RUNBASE/ $RUNDIR/
 cd $RUNDIR
 echo pwd is `pwd` `date +%T`
