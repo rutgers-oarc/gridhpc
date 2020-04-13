@@ -41,7 +41,7 @@ sbatch --dependency=afternotok:$SLURM_JOB_ID --kill-on-invalid-dep=yes -M $SLURM
 echo Creating rundir `date +%T`
 mkdir -p $RUNDIR
 # in case you want a custom config.xml
-rsync -a --delete $RUNBASE/ $RUNDIR/
+#rsync -a --delete $RUNBASE/ $RUNDIR/
 cd $RUNDIR
 echo pwd is `pwd` `date +%T`
 
