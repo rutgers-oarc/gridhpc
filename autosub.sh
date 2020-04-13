@@ -39,18 +39,18 @@ echo $GPU_AVAIL available gpu nodes
 echo cputhresh is $cputhresh
 echo gputhresh is $gputhresh
 if [ "$GPU_PEND" -gt "0" ]
- then echo no
+ then echo gpu no
  else if [ "$GPU_AVAIL" -lt "$gputhresh" ]
-   then echo no
-   else echo yes
+   then echo gpu no
+   else echo gpu yes
    sbatch -M $cluster fah.slurm
   fi
 fi
 if [ "$CPU_PEND" -gt "0" ]
- then echo no
+ then echo cpu no
  else if [ "$CPU_AVAIL" -lt "$cputhresh" ]
-   then echo no
-   else echo yes
+   then echo cpu no
+   else echo cpu yes
    sbatch -M $cluster rah.slurm
    sbatch -M $cluster wcg.slurm
   fi
