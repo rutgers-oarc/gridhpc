@@ -83,9 +83,7 @@ echo "Exit code: " $? "  " `date +%T`
 echo Removing rundir `date +%T`
 rm -rf $RUNDIR
 
-sleep 3
 sacct --format NTasks,MaxRSS,Elapsed,AveRSS,AveCPU -j $SLURM_JOBID
-sleep 3
 
 echo  Done at +$(($((`date +%s`-$STARTTIME))/60)) minutes
 

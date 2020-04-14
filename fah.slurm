@@ -25,9 +25,11 @@ export IMAGE=/home/someguy/gridhpc/fold.simg
 export RUNBASE=/home/someguy/gridhpc/base.fah
 export RUNDIR=/scratch/someguy/gridhpc/$SLURM_JOB_NAME.$SLURM_CLUSTER_NAME.$SLURM_JOB_ID
 export SINGCMD="singularity exec --nv -B /etc/OpenCL/vendors $IMAGE FAHClient --user=someguy --team=<teamid> --smp=true --gpu=true --chdir=$RUNDIR --exit-when-done --max-units 1 --max-queue 1 --checkpoint 1"
+export SINGEXIT="singularity exec $IMAGE FAHClient --chdir=$RUNDIR --send-finish"
 
 echo RUNDIR is $RUNDIR
 echo SINGCMD is $SINGCMD
+echo SINGEXIT is $SINGEXIT
 
 # slurm environment
 env |grep -i slurm
@@ -40,10 +42,8 @@ sbatch --dependency=afternotok:$SLURM_JOB_ID --kill-on-invalid-dep=yes -M $SLURM
 # create run dir
 echo Creating rundir `date +%T`
 mkdir -p $RUNDIR
-# custom config.xml for single gpu only
+# custom config.xml
 #rsync -a --delete $RUNBASE/ $RUNDIR/
-cd $RUNDIR
-echo pwd is `pwd` `date +%T`
 
 # start client
 echo Starting client `date +%T`
@@ -52,6 +52,14 @@ sleep 120
 
 export STARTTIME=`date +%s`
 echo starttime is $STARTTIME
+
+# wait runtime
+echo sleeping runtime
+sleep $RUNTIME
+
+# no more tasks
+echo sending finish
+srun $SINGEXIT
 
 # wait for client exit
 wait
@@ -62,9 +70,7 @@ echo "Exit code: " $? "  " `date +%T`
 echo Removing rundir `date +%T`
 rm -rf $RUNDIR
 
-sleep 3
 sacct --format NTasks,MaxRSS,Elapsed,AveRSS,AveCPU -j $SLURM_JOBID
-sleep 3
 
 echo Done at +$(($((`date +%s`-$STARTTIME))/60)) minutes
 
