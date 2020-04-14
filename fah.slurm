@@ -75,3 +75,4 @@ sacct --format NTasks,MaxRSS,Elapsed,AveRSS,AveCPU -j $SLURM_JOBID
 echo Done at +$(($((`date +%s`-$STARTTIME))/60)) minutes
 
 exit
+
