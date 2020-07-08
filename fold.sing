@@ -10,8 +10,8 @@ Include: yum
 %post
     echo "In the container..."
         yum -y install epel-release
-        yum -y install https://download.foldingathome.org/releases/public/release/fahclient/centos-6.7-64bit/v7.5/fahclient-7.5.1-1.x86_64.rpm \
-                https://download.foldingathome.org/releases/public/release/fahcontrol/centos-6.7-64bit/v7.5/fahcontrol-7.5.1-1.noarch.rpm \
-                https://download.foldingathome.org/releases/public/release/fahviewer/centos-6.7-64bit/v7.5/fahviewer-7.5.1-1.x86_64.rpm
+        yum -y install https://download.foldingathome.org/releases/public/release/fahclient/centos-6.7-64bit/v7.6/fahclient-7.6.13-1.x86_64.rpm \
+                https://download.foldingathome.org/releases/public/release/fahcontrol/centos-6.7-64bit/v7.6/fahcontrol-7.6.13-1.noarch.rpm \
+                https://download.foldingathome.org/releases/public/release/fahviewer/centos-6.7-64bit/v7.6/fahviewer-7.6.13-1.x86_64.rpm
         yum -y install opencl-headers clinfo ocl-icd ocl-icd-devel
         mkdir /scratch
