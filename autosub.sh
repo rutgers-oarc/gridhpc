@@ -1,15 +1,15 @@
 #!/bin/bash
 
 cluster=somecluster
-user=someguy
-rundir=/home/someguy/gridhpc
+user=someuser
+rundir=/home/someuser/gridhpc
 gputhresh=1
-cputhresh=1
 gpupart=gpu
-cpupart=main
 gpuqos=gpu
-cpuqos=main
 gpujob=fah
+cputhresh=1
+cpupart=main
+cpuqos=main
 cpujob=fah
 
 . /etc/profile.d/modules.sh 
@@ -41,17 +41,17 @@ echo $GPU_AVAIL available gpu nodes
 echo cputhresh is $cputhresh
 echo gputhresh is $gputhresh
 if [ "$GPU_PEND" -gt "0" ]
- then echo gpu no
- else if [ "$GPU_AVAIL" -lt "$gputhresh" ]
-   then echo gpu no
-   else echo gpu yes
-   sbatch -M $cluster -p $gpupart -q $gpuqos ${gpujob}.slurm
+  then echo gpu no - pending jobs
+  else if [ "$GPU_AVAIL" -lt "$gputhresh" ]
+    then echo gpu no - avail nodes
+    else echo gpu yes
+    sbatch -M $cluster -p $gpupart -q $gpuqos ${gpujob}.slurm
   fi
 fi
 if [ "$CPU_PEND" -gt "0" ]
- then echo cpu no
+ then echo cpu no - pending jobs
  else if [ "$CPU_AVAIL" -lt "$cputhresh" ]
-   then echo cpu no
+   then echo cpu no - avail nodes
    else echo cpu yes
    sbatch -M $cluster -p $cpupart -q $cpuqos ${cpujob}.slurm
   fi

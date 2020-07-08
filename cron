@@ -1,3 +1,3 @@
-*/5 * * * * /home/someguy/gridhpc/autosub.sh >> /home/someguy/gridhpc/autosub.log 2>>/home/someguy/gridhpc/autosub.err
-0 0 * * * find /home/someguy/gridhpc/out -type f -ctime +1 -exec rm -rf {} \;
-10 0 * * * find /scratch/someguy/gridhpc -maxdepth 1 -type d -ctime +1 -exec rm -rf {} \;
+*/5 * * * * /home/someuser/gridhpc/autosub.sh >> /home/someuser/gridhpc/autosub.log 2>>/home/someuser/gridhpc/autosub.err
+0 0 * * * find /home/someuser/gridhpc/out -type f -ctime +1 -exec rm -rf {} \;
+10 0 * * * find /scratch/someuser/gridhpc -maxdepth 1 -type d -ctime +1 -exec rm -rf {} \;

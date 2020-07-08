@@ -23,10 +23,10 @@ export CLEANPART=$SLURM_JOB_PARTITION
 export CLEANQOS=$SLURM_JOB_QOS
 export CLEANACCT=$SLURM_JOB_ACCOUNT
 export SINGULARITY_BINDPATH="/scratch"
-export IMAGE=/home/someguy/gridhpc/fold.simg
-export RUNBASE=/home/someguy/gridhpc/base.fah
-export RUNDIR=/scratch/someguy/gridhpc/$SLURM_JOB_NAME.$SLURM_CLUSTER_NAME.$SLURM_JOB_ID
-export SINGCMD="singularity exec --nv -B /etc/OpenCL/vendors $IMAGE FAHClient --user=someguy --team=<teamid> --smp=true --gpu=true --chdir=$RUNDIR --exit-when-done --max-units 1 --max-queue 1 --checkpoint 1"
+export IMAGE=/home/someuser/gridhpc/fold.simg
+export RUNBASE=/home/someuser/gridhpc/base.fah
+export RUNDIR=/scratch/someuser/gridhpc/$SLURM_JOB_NAME.$SLURM_CLUSTER_NAME.$SLURM_JOB_ID
+export SINGCMD="singularity exec --nv -B /etc/OpenCL/vendors $IMAGE FAHClient --user=someuser --team=<teamid> --smp=true --gpu=true --chdir=$RUNDIR --exit-when-done --max-units 1 --max-queue 1 --checkpoint 1"
 export SINGEXIT="singularity exec $IMAGE FAHClient --chdir=$RUNDIR --send-finish"
 
 #echo RUNDIR is $RUNDIR
