@@ -7,9 +7,10 @@
 #SBATCH -e out/err.%x.%N.%j
 #SBATCH -t 1-0
 #SBATCH -p gpu
-#SBATCH -A gpu
 #SBATCH -q gpu
+#SBATCH -A gpu
 #SBATCH --no-requeue
+#SBATCH --signal=TERM
 
 echo Starting job $SLURM_JOB_NAME on `hostname` at `date +%F" "%T`
 echo
@@ -17,6 +18,7 @@ echo
 . /etc/profile.d/modules.sh
 ml -q cuda singularity
 
+export RUNTIME=600
 export CLEANPART=$SLURM_JOB_PARTITION
 export CLEANQOS=$SLURM_JOB_QOS
 export CLEANACCT=$SLURM_JOB_ACCOUNT
@@ -27,9 +29,9 @@ export RUNDIR=/scratch/someguy/gridhpc/$SLURM_JOB_NAME.$SLURM_CLUSTER_NAME.$SLUR
 export SINGCMD="singularity exec --nv -B /etc/OpenCL/vendors $IMAGE FAHClient --user=someguy --team=<teamid> --smp=true --gpu=true --chdir=$RUNDIR --exit-when-done --max-units 1 --max-queue 1 --checkpoint 1"
 export SINGEXIT="singularity exec $IMAGE FAHClient --chdir=$RUNDIR --send-finish"
 
-echo RUNDIR is $RUNDIR
-echo SINGCMD is $SINGCMD
-echo SINGEXIT is $SINGEXIT
+#echo RUNDIR is $RUNDIR
+#echo SINGCMD is $SINGCMD
+#echo SINGEXIT is $SINGEXIT
 
 # slurm environment
 env |grep -i slurm
@@ -42,7 +44,7 @@ sbatch --dependency=afternotok:$SLURM_JOB_ID --kill-on-invalid-dep=yes -M $SLURM
 # create run dir
 echo Creating rundir `date +%T`
 mkdir -p $RUNDIR
-# custom config.xml
+# for a custom config.xml
 #rsync -a --delete $RUNBASE/ $RUNDIR/
 
 # start client

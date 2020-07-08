@@ -7,9 +7,10 @@
 #SBATCH -e out/err.%x.%N.%j
 #SBATCH -t 1-0
 #SBATCH -p main
-#SBATCH -A main
 #SBATCH -q main
+#SBATCH -A main
 #SBATCH --no-requeue
+#SBATCH --signal=TERM
 
 echo Starting job $SLURM_JOB_NAME on `hostname` at `date +%F" "%T`
 echo
@@ -17,10 +18,7 @@ echo
 . /etc/profile.d/modules.sh
 ml -q singularity
 
-# work runtime
 export RUNTIME=600
-echo runtime is $RUNTIME
-
 export CLEANPART=$SLURM_JOB_PARTITION
 export CLEANQOS=$SLURM_JOB_QOS
 export CLEANACCT=$SLURM_JOB_ACCOUNT
@@ -34,8 +32,8 @@ export SINGCMD="singularity exec $IMAGE"
 export PROJECT="http://boinc.bakerlab.org/rosetta"
 export PROJECTKEY="<somekey>"
 
-echo RUNDIR is $RUNDIR
-echo SINGCMD is $SINGCMD
+#echo RUNDIR is $RUNDIR
+#echo SINGCMD is $SINGCMD
 
 # slurm environment
 env |grep -i slurm

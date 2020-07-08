@@ -1,14 +1,16 @@
 #!/bin/bash
 
-cputhresh=2
-gputhresh=1
-rundir=/home/someguy/gridhpc
 cluster=somecluster
-cpupart=main
-gpupart=gpu
-cpujob=rah,wcg
-gpujob=fah
 user=someguy
+rundir=/home/someguy/gridhpc
+gputhresh=1
+cputhresh=1
+gpupart=gpu
+cpupart=main
+gpuqos=gpu
+cpuqos=main
+gpujob=fah
+cpujob=fah
 
 . /etc/profile.d/modules.sh 
 ml -q singularity
@@ -43,7 +45,7 @@ if [ "$GPU_PEND" -gt "0" ]
  else if [ "$GPU_AVAIL" -lt "$gputhresh" ]
    then echo gpu no
    else echo gpu yes
-   sbatch -M $cluster fah.slurm
+   sbatch -M $cluster -p $gpupart -q $gpuqos ${gpujob}.slurm
   fi
 fi
 if [ "$CPU_PEND" -gt "0" ]
@@ -51,8 +53,7 @@ if [ "$CPU_PEND" -gt "0" ]
  else if [ "$CPU_AVAIL" -lt "$cputhresh" ]
    then echo cpu no
    else echo cpu yes
-   sbatch -M $cluster rah.slurm
-   sbatch -M $cluster wcg.slurm
+   sbatch -M $cluster -p $cpupart -q $cpuqos ${cpujob}.slurm
   fi
 fi
 done
