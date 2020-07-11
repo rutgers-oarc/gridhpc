@@ -18,20 +18,14 @@ echo
 . /etc/profile.d/modules.sh
 ml -q cuda singularity
 
-export RUNTIME=600
 export CLEANPART=$SLURM_JOB_PARTITION
 export CLEANQOS=$SLURM_JOB_QOS
 export CLEANACCT=$SLURM_JOB_ACCOUNT
 export SINGULARITY_BINDPATH="/scratch"
-export IMAGE=/home/someuser/gridhpc/fold.simg
-export RUNBASE=/home/someuser/gridhpc/base.fah
+export IMAGE=/home/someuser/gridhpc/fah.simg
+export RUNBASE=/home/someuser/gridhpc/fah.base
 export RUNDIR=/scratch/someuser/gridhpc/$SLURM_JOB_NAME.$SLURM_CLUSTER_NAME.$SLURM_JOB_ID
-export SINGCMD="singularity exec --nv -B /etc/OpenCL/vendors $IMAGE FAHClient --user=someuser --team=<teamid> --smp=true --gpu=true --chdir=$RUNDIR --exit-when-done --max-units 1 --max-queue 1 --checkpoint 1"
-export SINGEXIT="singularity exec $IMAGE FAHClient --chdir=$RUNDIR --send-finish"
-
-#echo RUNDIR is $RUNDIR
-#echo SINGCMD is $SINGCMD
-#echo SINGEXIT is $SINGEXIT
+export SINGCMD="singularity exec --nv -B /etc/OpenCL/vendors $IMAGE FAHClient --user=<someuser> --team=<teamid> --smp=true --gpu=true --exit-when-done --max-units=1 --max-queue=1 --gui-enabled=false --chdir=$RUNDIR"
 
 # slurm environment
 env |grep -i slurm
@@ -44,7 +38,7 @@ sbatch --dependency=afternotok:$SLURM_JOB_ID --kill-on-invalid-dep=yes -M $SLURM
 # create run dir
 echo Creating rundir `date +%T`
 mkdir -p $RUNDIR
-# for a custom config.xml
+# for single gpu uncomment
 #rsync -a --delete $RUNBASE/ $RUNDIR/
 
 # start client
@@ -54,14 +48,6 @@ sleep 120
 
 export STARTTIME=`date +%s`
 echo starttime is $STARTTIME
-
-# wait runtime
-echo sleeping runtime
-sleep $RUNTIME
-
-# no more tasks
-echo sending finish
-srun $SINGEXIT
 
 # wait for client exit
 wait

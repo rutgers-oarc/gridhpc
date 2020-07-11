@@ -1,0 +1,18 @@
+<global_preferences>
+    <source_project>http://www.worldcommunitygrid.org/</source_project>
+    <source_scheduler>https://scheduler.worldcommunitygrid.org/boinc/wcg_cgi/fcgi</source_scheduler>
+   <work_buf_min_days>0.000000</work_buf_min_days>
+   <work_buf_additional_days>0.000000</work_buf_additional_days>
+   <run_if_user_active>1</run_if_user_active>
+   <run_gpu_if_user_active>1</run_gpu_if_user_active>
+   <suspend_cpu_usage>0.000000</suspend_cpu_usage>
+   <leave_apps_in_memory>1</leave_apps_in_memory>
+   <vm_max_used_pct>1.000000</vm_max_used_pct>
+   <ram_max_used_busy_pct>90.000000</ram_max_used_busy_pct>
+   <ram_max_used_idle_pct>90.000000</ram_max_used_idle_pct>
+   <cpu_usage_limit>100.000000</cpu_usage_limit>
+   <max_ncpus_pct>100.000000</max_ncpus_pct>
+<!--
+   <cpu_scheduling_period_minutes>1</cpu_scheduling_period_minutes>
+-->
+</global_preferences>

@@ -1,0 +1,17 @@
+BootStrap: yum
+OSVersion: 7
+MirrorURL: http://mirror.centos.org/centos-%{OSVERSION}/%{OSVERSION}/os/$basearch/
+Include: yum
+
+
+%runscript
+    echo "Running the container..."
+
+%post
+    echo "In the container..."
+        yum -y install epel-release
+        yum -y install https://download.foldingathome.org/releases/public/release/fahclient/centos-6.7-64bit/v7.6/fahclient-7.6.13-1.x86_64.rpm \
+                https://download.foldingathome.org/releases/public/release/fahcontrol/centos-6.7-64bit/v7.6/fahcontrol-7.6.13-1.noarch.rpm \
+                https://download.foldingathome.org/releases/public/release/fahviewer/centos-6.7-64bit/v7.6/fahviewer-7.6.13-1.x86_64.rpm
+        yum -y install opencl-headers clinfo ocl-icd ocl-icd-devel
+        mkdir /scratch
